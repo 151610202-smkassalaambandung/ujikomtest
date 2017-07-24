@@ -42,7 +42,7 @@ class BarangsController extends Controller
          ->addColumn(['data'=>'nama_barang','name'=>'nama_barang','title'=>'Nama Barang'])
          ->addColumn(['data'=>'jumlah_barang','name'=>'jumlah_barang','title'=>'Jumlah'])
          ->addColumn(['data'=>'modeli.nama','name'=>'modeli.nama','title'=>'Model'])
-         ->addColumn(['data'=>'harga','name'=>'harga','title'=>'Harga'])
+         ->addColumn(['data'=>'harga','name'=>'harga','title'=>'Harga Per Satuan'])
          ->addColumn(['data'=>'action','name'=>'action','title'=>'','orderable'=>false,'searchable'=>false]);
          return view('barangs.index')->with(compact('html'));
 
@@ -186,7 +186,7 @@ class BarangsController extends Controller
     }
     $barang->delete();
     
-    Session::flash("flash_notification",["level"=>"success","message"=>"Barang Berhasil Dihapus"]);
+    Session::flash("flash_notification",["level"=>"success","message"=>"Barang"]);
     return redirect()->route('barangs.index');
     }
 }
