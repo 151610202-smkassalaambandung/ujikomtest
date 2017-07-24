@@ -13,6 +13,9 @@
     <!-- Styles -->
     <link href="/css/bootstrap.min.css" rel="stylesheet">
     <link href="/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/css/jquery.dataTables.css" rel="stylesheet">
+    <link href="/css/dataTables.bootstrap.css" rel="stylesheet">
+
 
     <link href="/css/app.css" rel="stylesheet">
 
@@ -23,7 +26,17 @@
         ]); ?>
     </script>
 </head>
-<body>
+<style>
+    .navbar.navbar-default {
+background-color: black;
+background-color: rgba(10,10,10,0.6 );
+}
+</style>
+<body style="background: url({{asset('/img/b.jpg')}}); 
+             background-repeat: no-repeat;
+             background-size: cover; 
+             background-attachment: fixed;">
+    
     <div id="app">
         <nav class="navbar navbar-default navbar-static-top">
             <div class="container">
@@ -49,6 +62,10 @@
                         @if (Auth::check())
                         <li><a href="{{ url('/home')}}">Dasboard</a></li>
                         @endif
+                        @role('admin')
+                        <li><a href="{{ route('modelis.index')}}">Model</a></li>
+                        <li><a href="{{ route('barangs.index')}}">Barang</a></li>
+                        @endrole
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -82,13 +99,20 @@
                 </div>
             </div>
         </nav>
-
+        @include('layouts._flash')
         @yield('content')
     </div>
 
     <!-- Scripts -->
     <script src="/js/app.js"></script>
+    {{-- <script src="{{asset('/js/bootstrap.min.js')}}"></script> --}}
+     <script src="/js/jquery.dataTables.min.js"></script>
+    <script src="/js/dataTables.bootstrap.min.js"></script>
+    <script src="/js/dataTables.bootstrap.min.js"></script>
+    <script src="/js/custom.js"></script>
+   @yield('scripts')
 
-@include('layouts.slide')
+
+
 </body>
 </html>

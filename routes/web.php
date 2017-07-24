@@ -17,4 +17,12 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index');
+Route::get('/home', 'ModelisController@index');
+Route::group(['middleware'=>'web'], function(){
+
+Route::group(['prefix'=>'admin','middleware'=>['auth','role:admin']],function(){
+
+	Route::resource('modelis', 'ModelisController');
+	Route::resource('barangs', 'BarangsController');
+});
+});

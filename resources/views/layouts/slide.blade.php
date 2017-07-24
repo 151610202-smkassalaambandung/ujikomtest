@@ -8,7 +8,7 @@
 <h2 class="w3-center">Manual Slideshow</h2>
 
 <div class="w3-content w3-display-container">
-  <img class="mySlides" src="b.jpg" style="width:100%">
+  <img class="mySlides" src="b.jpg" style="width:100%" link='resources/views/layouts/b.jpg'>
   <img class="mySlides" src="img_lights.jpg" style="width:100%">
   <img class="mySlides" src="img_mountains.jpg" style="width:100%">
   <img class="mySlides" src="img_forest.jpg" style="width:100%">
