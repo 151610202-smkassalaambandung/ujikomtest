@@ -7,7 +7,7 @@
                <div class="panel panel-default">
                     <div class="panel-heading">Halo</div>
                     <div class="panel-body">
-                        Selamat Datang di Gallery Furniture
+                        {!! $html->table(['class'=>'table-striped'])!!}
                     </div>
                </div>
           </div>

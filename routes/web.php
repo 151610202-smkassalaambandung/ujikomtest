@@ -11,18 +11,24 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/','GuestController@index');
+Route::get('/home', function () {
+    return view('welcome.blade.php');
 });
 
 Auth::routes();
 
-Route::get('/home', 'ModelisController@index');
+
 Route::group(['middleware'=>'web'], function(){
 
 Route::group(['prefix'=>'admin','middleware'=>['auth','role:admin']],function(){
 
 	Route::resource('modelis', 'ModelisController');
 	Route::resource('barangs', 'BarangsController');
+	Route::resource('transaksis', 'TransaksisController');
 });
+});
+Route::get('/home','HomeController@index');
+Route::get('/test', function () {
+    return view('barangs.gallery');
 });

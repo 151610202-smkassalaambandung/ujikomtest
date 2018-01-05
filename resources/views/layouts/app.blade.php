@@ -60,12 +60,14 @@ background-color: rgba(10,10,10,0.6 );
                     <!-- Left Side Of Navbar -->
                     <ul class="nav navbar-nav">
                         @if (Auth::check())
-                        <li><a href="{{ url('/home')}}">Dasboard</a></li>
-                        @endif
+                        <li><a href="{{ url('/home')}}">Home</a></li>
+                        
                         @role('admin')
                         <li><a href="{{ route('modelis.index')}}">Model</a></li>
                         <li><a href="{{ route('barangs.index')}}">Barang</a></li>
+                        <li><a href="{{ route('transaksis.index')}}">Transaksi</a></li>
                         @endrole
+                        @endif
                     </ul>
 
                     <!-- Right Side Of Navbar -->

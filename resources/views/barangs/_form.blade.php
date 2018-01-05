@@ -21,7 +21,7 @@
 <div class="form-group {!! $errors->has('modeli_id') ? 'has-error':'' !!}">
     {!! Form::label('modeli_id','Model', ['class'=>'col-md-2 control-label'])!!}
     <div class="col-md-4">
-         {!! Form::select('modeli_id',["=>"]+App\Modeli::pluck('nama','id')->all(), null, ['placeholder'=>'Pilih Model'])!!}
+         {!! Form::select('modeli_id',["=>"]+App\Modeli::pluck('nama','id')->all(), null, ['class'=>'form-control','placeholder'=>'Pilih Model'])!!}
          {!! $errors->first('modeli_id', '<p class="help-block">:message</p>')!!}
    </div>
  </div>

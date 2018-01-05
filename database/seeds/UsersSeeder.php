@@ -29,7 +29,7 @@ class UsersSeeder extends Seeder
 
         //Membuat sample admin
         $admin= new User();
-        $admin->name = 'Admin Larapus';
+        $admin->name = 'Admin Gallery';
         $admin->email = 'admin@gmail.com';
         $admin->password = bcrypt('rahasia');
         $admin->save();

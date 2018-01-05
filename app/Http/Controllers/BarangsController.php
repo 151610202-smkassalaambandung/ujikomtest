@@ -181,12 +181,12 @@ class BarangsController extends Controller
                 File::delete($filepath);
             } catch (FileNotFoundException $e) {
               //file sudah dihapus tidak ada
-
+ 
         }
     }
     $barang->delete();
     
-    Session::flash("flash_notification",["level"=>"success","message"=>"Barang"]);
+    Session::flash("flash_notification",["level"=>"success","message"=>"$barang->nama_barang Berhasil Dihapus"]);
     return redirect()->route('barangs.index');
     }
 }

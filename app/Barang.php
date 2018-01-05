@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Barang extends Model
 {
     //
-     protected $fillable =['nama_barang','modeli_id','jumlah_barang','harga'];
+     protected $fillable =['nama_barang','modeli_id','jumlah_barang','harga','cover'];
     public function modeli()
     {
  	return $this->belongsTo('App\Modeli');
