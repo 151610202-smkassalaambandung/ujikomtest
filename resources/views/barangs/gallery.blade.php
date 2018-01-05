@@ -4,7 +4,6 @@
 
 
     <link href="{{asset('/css/bootstrap.min.css')}}" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.css">
     <link rel="stylesheet" href="{{asset('/css/thumbnail-gallery.css')}}">
 
@@ -13,9 +12,8 @@
 
 <div class="container gallery-container">
 
-    <h1>Bootstrap 3 Gallery</h1>
 
-    <p class="page-description text-center">Thumbnails With Title And Description</p>
+    <p class="page-description text-center"><h1>FURNITURE</h1></p>
     
     <div class="tz-gallery">
 

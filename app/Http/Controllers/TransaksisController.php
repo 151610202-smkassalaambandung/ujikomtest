@@ -127,5 +127,10 @@ class TransaksisController extends Controller
     public function destroy($id)
     {
         //
+        Transaksi::destroy($id);
+
+        Session::flash("flash_notification", ["level"=>"success","message"=>"Transaksi berhasil dihapus"]);
+        return redirect()->route('transaksis.index');
+   
     }
 }

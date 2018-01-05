@@ -21,7 +21,7 @@ Auth::routes();
 
 Route::group(['middleware'=>'web'], function(){
 
-Route::group(['prefix'=>'admin','middleware'=>['auth','role:admin']],function(){
+Route::group(['prefix'=>'admin'],function(){
 
 	Route::resource('modelis', 'ModelisController');
 	Route::resource('barangs', 'BarangsController');
