@@ -19,7 +19,7 @@ Route::get('/home', function () {
 Auth::routes();
 
 
-Route::group(['middleware'=>'web'], function(){
+Route::group(['middleware'=>'auth'], function(){
 
 Route::group(['prefix'=>'admin'],function(){
 

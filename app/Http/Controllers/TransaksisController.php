@@ -41,8 +41,7 @@ class TransaksisController extends Controller
          ->addColumn(['data'=>'tgl_membeli','name'=>'tgl_membeli','title'=>'Tanggal Pembelian'])
          ->addColumn(['data'=>'barang.nama_barang','name'=>'barang.nama_barang','title'=>'Barang'])
          ->addColumn(['data'=>'jumlah_barang','name'=>'jumlah_barang','title'=>'Jumlah Barang'])
-         ->addColumn(['data'=>'total_harga','name'=>'total_harga','title'=>'Total Harga'])
-         ->addColumn(['data'=>'action','name'=>'action','title'=>'','orderable'=>false,'searchable'=>false]);
+         ->addColumn(['data'=>'total_harga','name'=>'total_harga','title'=>'Total Harga']);
          return view('transaksis.index')->with(compact('html'));
     }
 
